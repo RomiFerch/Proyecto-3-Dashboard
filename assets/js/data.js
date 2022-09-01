@@ -10,7 +10,7 @@ let config1 = {
 console.log('hola');
 
 async function showGraphic() {
-  
+ 
   const getMovie = async () => {
     try{
       const response = await axios.get(url, config1)
@@ -22,8 +22,8 @@ async function showGraphic() {
       let ranking = response.data.results.map(pelicula => pelicula.vote_average)
       console.log(ranking);
 
-      ejeX = nameMovie
-      ejeY = ranking
+      ejeX = nameMovie.slice(0,10)
+      ejeY = ranking.slice(0,10)
       
     }catch(error){
       console.log(error);
@@ -67,6 +67,27 @@ async function showGraphic() {
         config
       );
 }
-showGraphic()
+//showGraphic()
+/* global bootstrap: false 
+(() => {
+  'use strict'
+   const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+   tooltipTriggerList.forEach(tooltipTriggerEl => {
+     new bootstrap.Tooltip(tooltipTriggerEl)
+   })
+ })()
+*/
 
+//eventListener
 
+let menu = document.getElementById('menu')
+
+menu.addEventListener('click', (e) =>{
+
+  if (e.target && e.target.tagName === ('A')) {
+    
+    showGraphic()
+    
+  }
+  
+})
