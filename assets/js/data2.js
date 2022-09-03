@@ -94,7 +94,7 @@ $('sidebar ul li').on('click', function(){
   $(this).addClass('active')
 })
 
-const getMovie2 = async () => {
+/*const getMovie2 = async () => {
   try{
     const response = await axios.get(url1, config1)
     console.log(response.data);
@@ -102,4 +102,4 @@ const getMovie2 = async () => {
   } catch(error){
     console.log(error);
   }}
-getMovie2()
+getMovie2()*/

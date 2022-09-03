@@ -16,6 +16,7 @@ body{
     /* background: gray; */
     min-width: 250px;
     max-width: 250px;
+    height: auto;
 }
 .content{
     min-height: 100vh;
@@ -25,13 +26,7 @@ hr.h-color{
     background-color: #eee;
 }
 
-.sidebar li.active{
-    background-color: #eee;
-    border-radius: 8px;
-}
-.sidebar li.active a, .sidebar li.active a:hover {
-    color: #000;
-}
+
 
 .sidebar li a{
     color: #fff;
