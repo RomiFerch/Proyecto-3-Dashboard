@@ -6,7 +6,6 @@ let ejeX = [], ejeY = [], ejeY2 = []
 
 
 let url = 'https://api.themoviedb.org/3/movie/now_playing?api_key=617fd88a44663150d05a15b5b030d50e&language=es-LA'
-let url1 = 'https://api.themoviedb.org/3/movie/{movie_id}/recommendations?api_key=617fd88a44663150d05a15b5b030d50e&page=1'
 let config1 = {
     header :{
         'Content-Type' : 'application/json'
@@ -88,18 +87,3 @@ menu.addEventListener('click', (e) =>{
   
 }
 })
-
-$('sidebar ul li').on('click', function(){
-  $('.sidebar ul li.active').removeClass('active')
-  $(this).addClass('active')
-})
-
-/*const getMovie2 = async () => {
-  try{
-    const response = await axios.get(url1, config1)
-    console.log(response.data);
-
-  } catch(error){
-    console.log(error);
-  }}
-getMovie2()*/
