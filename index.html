@@ -12,45 +12,44 @@
 <body>
     <!-- SIDEBAR -->
     <div class="main-container d-flex">
-        <div class="sidebar text-bg-dark collapse collapse-horizontal" id="collapseWidthExample">
+        <div class="sidebar collapse collapse-horizontal" id="collapseWidthExample">
             <div class="header-box p-3 m-2">
-                <div>
-                <h1 class="fs-4"> <span class="text-bg-dark rounded shadow px-2 me-2"><i class="fa-solid fa-film p-1"></i></span> <span class="text-bg-dark p-1">Best Movies</span></h1>
-                </div>
+                
         
                   <!-- Lista sidebar -->
                 <ul class="list-unstyled px-2" id="menu">
-                    <li> <a class="text-decoration-none px-3 py-2 d-block btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"" id="top"href="#"><i class="fa-regular fa-star"></i> Top Rated </a></li>
-                    <li> <a class="text-decoration-none px-3 py-2 d-block btn" id="cine" href="#"><<i class="fa-solid fa-arrow-up-right-dots"></i> Ranking </a></li>
-                    <li> <a class="text-decoration-none px-3 py-2 d-block btn" id="popular" href="#"><i class="fa-regular fa-envelope" ></i> Mensajes </a></li>
-                    <li> <a class="text-decoration-none px-3 py-2 d-block btn" href="#"><i class="fa-regular fa-bookmark"></i> Favoritos </a></li>
+                    <li class="m-2"> <a class="text-decoration-none px-3 py-2 d-block btn btn-outline-info btn-lg " data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"" id="top"href="#"><i class="fa-regular fa-star"></i> Top Rated </a></li>
+                    <li class="m-2"> <a class="text-decoration-none px-3 py-2 d-block btn btn-outline-info btn-lg " id="cine" href="#"><<i class="fa-solid fa-arrow-up-right-dots"></i> Ranking </a></li>
+                    <li class="m-2"> <a class="text-decoration-none px-3 py-2 d-block btn btn-outline-info btn-lg " id="popular" href="#"><i class="fa-regular fa-envelope" ></i> Mensajes </a></li>
+                    <li class="m-2"> <a class="text-decoration-none px-3 py-2 d-block btn btn-outline-info btn-lg " href="#"><i class="fa-regular fa-bookmark"></i> Favoritos </a></li>
                 </ul>
                 <hr class="h-color mx-3">
             </div>
         </div>
         <!-- NAVBAR -->
         <div class="content">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-menu">
                 <div class="container-fluid">
-                    <div class="d-flex justify-content-between d-md-none d-block">
+                    <div class="d-flex justify-content-end d-md-none d-block">
                     <a class="navbar-brand fs-4" href="#"></a>
-                    <button class="btn px-1 py-0 open-btn"><i class="fa-solid fa-bars-staggered"></i></button>
+                    <button class="btn px-1 py-0 open-btn"><i class="fa-solid fa-bars-staggered"></i>Hola</button>
                 </div>
                 <div class="hstack gap-2">
-                    <button class=" btn d-block  px-1 py-0 text-white "data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"><i class="fa-solid fa-angles-right"></i>  Menú  </button>
+                    <button class=" btn d-block  px-1 py-0 text-white btnMenu"data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"><i class="fa-solid fa-angles-right"></i>  Estadísticas </button>
                     
                     <div class="vr"></div>
-                
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarProfile">
-                      <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
-                          <a class="nav-link active ms-auto" aria-current="page" href="#">Mi Perfil</a>
-                        </li>
-                       
-                      </ul>
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-end" id="navbarProfile">
+                        <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                          <li class="nav-item">                 
+                            <div justify-content-end>
+                                <h1 class="fs-4"> <span class="textlogo rounded shadow px-2 me-2"><i class="fa-solid fa-film p-1"></i></span> <span class="textlogo p-1 fs-bold">Best Movies</span></h1>
+                                </div>
+                          </li>
+                         
+                        </ul>               
                     </div>
                   </div>
                 </div>
@@ -67,8 +66,9 @@
                 <div class="container p-3 collapse" id="collapseExample"">
                     <div class="d-flex flex-column p-3 text-bg-light Chart1" id="Chart1">
                         <div class="active md-4 chart" >
-                            <h1 class="fs-bold">Descripción</h1>
-                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​.</p>
+                            <h1 class="fs-bold desc-h1">MEJORES PELÍCULAS SEGÚN LOS USUARIOS</h1>
+                            <p>Las 20 últimas mejores peliculas segun su calificación promedio 
+                                 y popularidad medida por la cantidad de visualizaciones en cines.
 
                           </div>
                     </div>

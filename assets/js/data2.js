@@ -39,14 +39,14 @@ async function showGraphic() {
       labels: ejeX,
       datasets: [{
         label: 'Más Vistas',
-        backgroundColor: 'purple',
-        borderColor:  'purple',
+        backgroundColor: 'rgb(144,206,161)',
+        borderColor:  'rgb(30,213,169)',
         data: ejeY,
       }, 
       {
         label: 'Nota promedio',
-        backgroundColor: 'pink',
-        borderColor: 'pink',
+        backgroundColor: 'rgba(255,99,132,0.2)',
+        borderColor: 'rgba(255,99,132,1)',
         data: ejeY2,
       } 
     ]

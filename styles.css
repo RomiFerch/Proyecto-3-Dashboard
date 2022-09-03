@@ -17,11 +17,29 @@ body{
     min-width: 250px;
     max-width: 250px;
     height: auto;
+    background-color: rgb(3,37,65)
+}
+.navbar-menu{
+    background: rgb(3,37,65)
+}
+.textlogo
+    {
+    background: linear-gradient(rgb(144,206,161),rgb(1,180,228));
+    -webkit-background-clip: text;
+    color: transparent;
+    }
+.btnMenu{
+    background-color: rgb(234,20,140)
+
+}
+.btn1 :hover{
+    border: rgb(234,20,140);
 }
 .content{
     min-height: 100vh;
     width: 100%;
 }
+
 hr.h-color{
     background-color: #eee;
 }
@@ -30,4 +48,7 @@ hr.h-color{
 
 .sidebar li a{
     color: #fff;
+}
+.desc-h1 {
+    color: rgba(255,99,132,0.2);
 }
