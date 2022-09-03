@@ -22,10 +22,23 @@ let config1 = {
         let nameMovie = response.data.results.map(x => x.title)
         let votacion = response.data.results.map(x => x.vote_average)
         let popularity = response.data.results.map(x => x.popularity)
-      
+      //  let poster=response.data.results.map(x => x.poster_path)
         ejeX = nameMovie
         ejeY = popularity
         ejeY2 = votacion
+       
+        let peliculas = '';
+			  response.data.results.forEach(pelicula => {
+          console.log(pelicula.poster_path)
+				peliculas += `
+					<div class="pelicula">
+						<img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}">
+						<h3 class="titulo">${pelicula.title}</h3>
+					</div>
+				`;
+			});
+
+			document.getElementById('contenedor').innerHTML = peliculas;
 
        
       } catch(error){
