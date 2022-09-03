@@ -10,29 +10,37 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <!-- SIDEBAR -->
     <div class="main-container d-flex">
-        <div class="sidebar text-bg-dark id="side_nav">
+        <div class="sidebar text-bg-dark collapse collapse-horizontal" id="collapseWidthExample">
             <div class="header-box p-3 m-2">
-                <h1 class="fs-4"> <span class="bg-white text-dark rounded shadow px-2 me-2"><i class="fa-solid fa-film"></i></span> <span class="text-white"> Best Movies</span> </h1>
-                <button class=" btn d-md-none d-block  close-btn px-1 py-0 text-white"><i class="fa-solid fa-bars-staggered"></i></button>
-
-               <!-- Lista sidebar -->
+                <div>
+                <h1 class="fs-4"> <span class="text-bg-dark rounded shadow px-2 me-2"><i class="fa-solid fa-film p-1"></i></span> <span class="text-bg-dark p-1">Best Movies</span></h1>
+                </div>
+        
+                  <!-- Lista sidebar -->
                 <ul class="list-unstyled px-2" id="menu">
-                    <li class="active"> <a class="text-decoration-none px-3 py-2 d-block" id="top"href="#"> <i class="fa-solid fa-house" ></i>Top Rated</a></li>
-                    <li> <a class="text-decoration-none px-3 py-2 d-block" id="cine" href="#"><i class="fa-solid fa-chart-line" ></i>Ranking</a></li>
-                    <li> <a class="text-decoration-none px-3 py-2 d-block" id="popular" href="#"><i class="fa-regular fa-envelope" ></i>Mensajes</a></li>
-                    <li> <a class="text-decoration-none px-3 py-2 d-block" href="#"><i class="fa-regular fa-bookmark"></i>Favoritos</a></li>
+                    <li> <a class="text-decoration-none px-3 py-2 d-block btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"" id="top"href="#"><i class="fa-regular fa-star"></i> Top Rated </a></li>
+                    <li> <a class="text-decoration-none px-3 py-2 d-block btn" id="cine" href="#"><i class="fa-solid fa-arrow-up-right-dots"></i> Ranking </a></li>
+                    <li> <a class="text-decoration-none px-3 py-2 d-block btn" id="popular" href="#"><i class="fa-regular fa-envelope" ></i> Mensajes </a></li>
+                    <li> <a class="text-decoration-none px-3 py-2 d-block btn" href="#"><i class="fa-regular fa-bookmark"></i> Favoritos </a></li>
                 </ul>
                 <hr class="h-color mx-3">
             </div>
         </div>
+        <!-- NAVBAR -->
         <div class="content">
-            <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between d-md-none d-block">
                     <a class="navbar-brand fs-4" href="#"></a>
                     <button class="btn px-1 py-0 open-btn"><i class="fa-solid fa-bars-staggered"></i></button>
                 </div>
+                <div class="hstack gap-2">
+                    <button class=" btn d-block  px-1 py-0 text-white "data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"><i class="fa-solid fa-angles-right"></i>  Menú  </button>
+                    
+                    <div class="vr"></div>
+                
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -45,15 +53,25 @@
                       </ul>
                     </div>
                   </div>
+                </div>
             </nav>
+            <!-- CHART -->
             <div class="content">
-                <div class="container p-3">
+                <div class="container p-3 collapse" id="collapseExample">
                     <div class="d-flex flex-column p-3 text-bg-light Chart1" id="Chart1">
                         <div class="active md-4 chart" >
                             <canvas id="myChart"></canvas>
                           </div>
                     </div>
                 </div>
+                <div class="container p-3 collapse" id="collapseExample">
+                    <div class="d-flex flex-column p-3 text-bg-light Chart1" id="Chart1">
+                        <div class="active md-4 chart" >
+                            <h1 class="fs-bold">Descripción</h1>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​.</p>
+
+                          </div>
+                    </div>
 
             </div>
 
@@ -70,14 +88,16 @@
     <script src="https://kit.fontawesome.com/c7e025dd91.js" crossorigin="anonymous"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    
+    <!-- Jquery -->
+   
     <!-- <script src="./assets/js/data.js"></script> -->
     <script src="./assets/js/main.js" type="module"></script>
     <!-- <script>
         $('sidebar ul li').on('click', function(){
         $('.sidebar ul li.active').removeClass('active')
         $(this).addClass('active')
-}) -->
-    </script>
+
+})
+    </script> -->
 </body>
 </html>

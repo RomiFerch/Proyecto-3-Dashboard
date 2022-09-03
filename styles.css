@@ -1,0 +1,33 @@
+/**.chart {
+    width: 600px;
+    height: 600px;
+}*/
+body{
+    background: #eee;
+}
+.Chart1 {
+    height: auto;
+    position: relative;
+    border-radius: 10px ;
+    box-shadow: 5px 5px 5px gray;
+} 
+
+.sidebar {
+    /* background: gray; */
+    min-width: 250px;
+    max-width: 250px;
+    height: auto;
+}
+.content{
+    min-height: 100vh;
+    width: 100%;
+}
+hr.h-color{
+    background-color: #eee;
+}
+
+
+
+.sidebar li a{
+    color: #fff;
+}
