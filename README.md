@@ -5,7 +5,7 @@ Datos obtenidos desde una Api
 
 #Instrucciones
 
--desplegar la barra lateral y presionar el boton >>Estadisticas
+-desplegar la barra lateral al presionar el boton >>Estadisticas, en Top Rated encontraras toda la información actializada de las ultimas 20 peliculas en cartelera.
 
 Enlace de Despliege
 https://romiferch.github.io/Proyecto-3-Dashboard/
