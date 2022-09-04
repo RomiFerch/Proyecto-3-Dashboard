@@ -60,3 +60,27 @@ hr.h-color{
 .sidebar li a{
     color: #fff;
 }
+.contenedor {
+	width: 90%;
+	max-width: auto;
+	margin: auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+    
+}
+.contenedor .pelicula {
+	text-align: center;
+}
+
+.contenedor .pelicula .titulo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor .pelicula .poster {
+	width: 60%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}

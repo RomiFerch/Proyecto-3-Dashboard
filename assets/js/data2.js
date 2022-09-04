@@ -5,25 +5,40 @@ let ejeX = [], ejeY = [], ejeY2 = []
 // language = &language=es-LA
 
 
-let url = 'https://api.themoviedb.org/3/movie/now_playing?api_key=617fd88a44663150d05a15b5b030d50e&language=es-LA'
-let config1 = {
+
+console.log('hola');
+
+export async function showGraphic() {
+  let url = 'https://api.themoviedb.org/3/movie/now_playing?api_key=617fd88a44663150d05a15b5b030d50e&language=es-LA'
+
+  let config1 = {
     header :{
         'Content-Type' : 'application/json'
     }
 }
-console.log('hola');
-
-async function showGraphic() {
   const getMovie = async () => {
       try{
         const response = await axios.get(url, config1)
         let nameMovie = response.data.results.map(x => x.title)
         let votacion = response.data.results.map(x => x.vote_average)
         let popularity = response.data.results.map(x => x.popularity)
-      
+      //  let poster=response.data.results.map(x => x.poster_path)
         ejeX = nameMovie
         ejeY = popularity
         ejeY2 = votacion
+       
+        let peliculas = '';
+			  response.data.results.forEach(pelicula => {
+          console.log(pelicula.poster_path)
+				peliculas += `
+					<div class="pelicula">
+						<img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}">
+						<h3 class="titulo">${pelicula.title}</h3>
+					</div>
+				`;
+			});
+
+			document.getElementById('contenedor').innerHTML = peliculas;
 
        
       } catch(error){
@@ -72,18 +87,13 @@ async function showGraphic() {
 
 //eventListener
 
-let menu = document.getElementById('menu')
 
-menu.addEventListener('click', (e) =>{
-
-    console.log(e.target);
-  if (e.target && e.target.id === ('top')) {
-    
-    showGraphic()
-    
-  }
-  else if (e.target && e.target.id === ('cine')) {
-    console.log('cine');
-  
-}
-})
+/*const getMovie2 = async () => {
+  try{
+    const response = await axios.get(url1, config1)
+    console.log(response.data);
+  } catch(error){
+    console.log(error);
+  }}
+getMovie2()*/
+ 
